@@ -97,3 +97,6 @@ xunit.xml
 
 # Sample grist documents
 /samples/
+
+# authentik
+/grist-certs

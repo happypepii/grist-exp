@@ -64,6 +64,19 @@ import {getOriginUrl} from 'app/server/lib/requestUtils';
 import {fromCallback} from 'app/server/lib/serverUtils';
 import {Sessions} from 'app/server/lib/Sessions';
 
+// authentik sa
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+console.log('Process Environment:', process.env); // Log the entire process environment
+console.log('Grist SAML SP Host:', process.env.GRIST_SAML_SP_HOST);
+console.log('Grist SAML SP Key:', process.env.GRIST_SAML_SP_KEY);
+console.log('Grist SAML SP Cert:', process.env.GRIST_SAML_SP_CERT);
+console.log('Grist SAML IDP Login:', process.env.GRIST_SAML_IDP_LOGIN);
+console.log('Grist SAML IDP Logout:', process.env.GRIST_SAML_IDP_LOGOUT);
+console.log('Grist SAML IDP Certs:', process.env.GRIST_SAML_IDP_CERTS);
+console.log('Grist SAML IDP Unencrypted:', process.env.GRIST_SAML_IDP_UNENCRYPTED);
+
 export class SamlConfig {
   private _serviceProvider: saml2.ServiceProvider;
   private _identityProvider: saml2.IdentityProvider;

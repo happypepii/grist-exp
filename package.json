@@ -140,6 +140,7 @@
     "currency-symbol-map": "5.1.0",
     "diff-match-patch": "1.0.5",
     "dompurify": "3.0.6",
+    "dotenv": "^16.4.5",
     "double-ended-queue": "2.1.0-0",
     "engine.io": "^6.5.4",
     "engine.io-client": "^6.5.3",
