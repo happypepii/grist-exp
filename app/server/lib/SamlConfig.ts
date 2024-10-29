@@ -197,7 +197,9 @@ export class SamlConfig {
         const fname = samlUser.given_name || samlUser.attributes.FirstName || '';
         const lname = samlUser.surname || samlUser.attributes.LastName || '';
         const email = samlUser.email || samlUser.name_id;
+        const group = samlUser.group || '';
         const profile = {
+          group,
           email,
           name: `${fname} ${lname}`.trim(),
         };
