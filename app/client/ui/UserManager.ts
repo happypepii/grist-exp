@@ -637,7 +637,8 @@ function getFullUser(member: IEditableMember): FullUser {
     name: member.name,
     email: member.email,
     picture: member.picture,
-    locale: member.locale
+    locale: member.locale,
+    samlGroup: member.samlGroup,
   };
 }
 

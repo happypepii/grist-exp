@@ -83,8 +83,9 @@ export class AccountPage extends Disposable {
       css.container(css.accountPage(
         css.header(t("Account settings")),
         css.dataRow(
-          css.inlineSubHeader(t("Email")),
-          css.email(user.group), // add group to show on profile UI
+          css.inlineSubHeader(t("Group")),
+          css.email(user.samlGroup), // add group to show on profile UI
+          css.email(`${user.samlGroup}`),
         ),
         css.dataRow(
           css.inlineSubHeader(t("Email")),

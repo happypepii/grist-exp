@@ -72,6 +72,7 @@ export interface IEditableMember {
   isNew: boolean;
   isRemoved: boolean;
   isTeamMember?: boolean;
+  samlGroup?: string | null;
 }
 
 // An option for the select elements used in the UserManager.
@@ -94,6 +95,7 @@ interface IBuildMemberOptions {
   access: roles.Role|null;
   parentAccess: roles.BasicRole|null;
   isTeamMember?: boolean;
+  samlGroup?: string|null;
 }
 
 /**
@@ -385,6 +387,7 @@ export class UserManagerModelImpl extends Disposable implements UserManagerModel
       isNew: false,
       isRemoved: false,
       isTeamMember: member.isTeamMember,
+      samlGroup: member.samlGroup,
     };
   }
 }

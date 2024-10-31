@@ -64,6 +64,9 @@ export class User extends BaseEntity {
   @Column({name: 'ref', type: String, nullable: false})
   public ref: string;
 
+  @Column({name: 'samlGroup', type: String, nullable: false})
+  public samlGroup: string;
+  
   @BeforeInsert()
   public async beforeInsert() {
     if (!this.ref) {

@@ -20,6 +20,7 @@ export interface UserInfo {
    */
   ShareRef: number | null;
   [attributes: string]: unknown;
+  samlGroup: string | null;
 }
 
 /**
@@ -37,6 +38,7 @@ export class User implements UserInfo {
   public SessionID: string | null = null;
   public UserRef: string | null = null;
   public ShareRef: number | null = null;
+  public samlGroup: string | null = null;
   [attribute: string]: any;
 
   constructor(info: Record<string, unknown> = {}) {

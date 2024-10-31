@@ -184,6 +184,7 @@ export class UsersManager {
     const result: FullUser = {
       id: user.id,
       email: displayEmail,
+      samlGroup: user.samlGroup || '1234567',
       // Only include loginEmail when it's different, to avoid overhead when FullUser is sent
       // around, and also to avoid updating too many tests.
       loginEmail: loginEmail !== displayEmail ? loginEmail : undefined,
